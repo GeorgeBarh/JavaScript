@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Contacts</title>
+    <link rel="stylesheet" href="./mobile-contacts.css">
+</head>
+
+<body>
+
+    <div class="outer">
+
+        <div class="menu">
+            <ul>
+                <li><a class="insert" href="">Insert Contact</a></li>
+                <li><a class="search-link" href="">Search contact</a></li>
+                <li><a class="show" href="">Show Contacts</a></li>
+            </ul>
+        </div>
+        <form class="insert-contact-form hidden">
+            <section>
+                <h2>Insert Contact</h2>
+                <fieldset>
+                    <legend>Contact's Details</legend>
+
+                    <div>
+                        <label for="firstname">First name:</label>
+                        <input type="text" name="" id="firstname">
+                    </div>
+
+                    <div>
+                        <label for="lastname">Lastname:</label>
+                        <input type="text" name="" id="lastname">
+                    </div>
+
+                    <div>
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" name="" id="phoneNumber">
+                    </div>
+                </fieldset>
+
+                <div class="btn-send">
+                    <button id="btn" type="button">Send</button>
+
+                </div>
+            </section>
+        </form>
+
+        <div class="search-form hidden">
+            <form>
+                <input type="text" id="searchInput" class="search rounded" placeholder="Please type a phone number">
+            </form>
+        </div>
+
+    </div>
+
+    <table class="contacts-table">
+
+    </table>
+
+    <div class="error m-top hidden">
+        <span>No contacts based on your search</span>
+    </div>
+
+    <div class="found m-top hidden">
+        <span>Contacts found with the same phone number</span>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./mobile-contacts.js"></script>
+
+</body>
+
+</html>
