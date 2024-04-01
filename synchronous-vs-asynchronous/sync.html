@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="quota">Quota</label>
+        <input id="quota" type="text" value="100000">
+        <input type="text">
+        <button id="generateBtn" type="button">Generate Primes</button>
+    </div>
+
+    <script>
+        const QUOTA = 100000
+        document.querySelector('#generateBtn').addEventListener('click', function () {
+            generateBtnClicked()
+        })
+
+        function generateBtnClicked() {
+            let primesVal = document.querySelector('#quota').value
+            generatePrimes(primesVal)
+
+        }
+
+        function generatePrimes(quota) {
+            const primes = []
+            let isPrime
+            for (let i = 1; i <= quota; i++) {
+                isPrime = true
+
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false
+                        break
+                    }
+                }
+                if (isPrime) {
+                    primes.push(i)
+                    console.log("Is prime" + i)
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="quota">Quota</label>
+        <input type="text" id="quota" value="=1000">
+        <input type="text" name="" id="">
+        <button id="generateBtn" type="button">Generate Primes</button>
+    </div>
+
+    <script>
+        const QUOTA = 100000
+
+
+        document.querySelector('#generateBtn').addEventListener('click', function () {
+            generateBtnClicked()
+        })
+
+
+
+        function generateBtnClicked() {
+            let primesVal = document.querySelector('#quota').value
+            generatePrimes(primesVal)
+        }
+
+        function generatePrimes(quota) {
+            const primes = []
+            let isPrime
+            for (let i = 1; i <= quota; i++) {
+                isPrime = true
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false
+                        break
+                    }
+                }
+
+                if (isPrime) {
+                    primes.push(i)
+                    console.log("Is Prime" + i)
+                }
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html> -->
